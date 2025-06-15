@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News Aggregator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <h1>My Trusted News</h1>
+
+  <div id="button-container">
+    <button id="viewSavedBtn">📖 Saved Articles</button>
+    <button id="viewAllFeedsBtn">📰 All Trusted Feeds</button>
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+  </div>
+
+  <label for="sourceSelect">Choose a source:</label>
+  <select id="sourceSelect">    
+    <option value="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml">NYTimes</option>
+    <option value="https://feeds.bbci.co.uk/news/rss.xml">BBC</option>
+    <option value="https://www.aljazeera.com/xml/rss/all.xml">Al Jazeera</option>
+  </select>
+
+  <br><br>
+
+  <label for="rssInput">Add RSS feed:</label>
+  <input type="text" id="rssInput" placeholder="Paste RSS URL">
+  <button id="addFeedBtn">➕ Add Source</button>
+
+  <br><br>
+
+  <label for="categoryFilter">Filter by category:</label>
+  <select id="categoryFilter">
+    <option value="all">All Categories</option>
+    <option value="business">Business</option>
+    <option value="technology">Technology</option>
+    <option value="health">Health</option>
+  </select>
+
+  <br><br>
+
+  <label for="keywordFilter">Search by keyword:</label>
+  <input type="text" id="keywordFilter" placeholder="Enter keyword">
+  <button id="searchBtn">🔍 Search</button>
+
+  <br><br>
+
+  <label for="dateFilter">Filter by date:</label>
+  <input type="date" id="dateFilter">
+
+  <div id="news-container"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
